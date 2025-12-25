@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+html, body {
+  height: 100%;
+}
+body {
+  background-image:
+    radial-gradient(1200px 600px at 20% 10%, rgba(168, 85, 247, 0.10), transparent 60%),
+    radial-gradient(1200px 600px at 80% 20%, rgba(34, 211, 238, 0.10), transparent 60%);
+}

@@ -1,0 +1,339 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroMotion from "../components/HeroMotion.jsx";
+import About from "../components/About.jsx";
+import My2025 from "../components/My2025.jsx";
+import Activities from "../components/Activities.astro";
+---
+
+<BaseLayout title="Artur — Portfolio">
+  <!-- 1) HERO -->
+  <HeroMotion client:load />
+
+  <!-- 2) ABOUT (твой About.jsx) -->
+  <About client:load />
+
+  <!-- 3) MY 2025 -->
+  <My2025 client:load />
+
+
+<!-- ACTIVITIES -->
+<Activities />
+<!-- TECH STACK -->
+<section id="stack" class="mt-14">
+  <div class="flex items-end justify-between gap-4">
+    <div>
+      <h2 class="text-xl font-semibold">Tech Stack</h2>
+      <p class="mt-2 text-zinc-400">
+        What I use and what I’ve trained hard — from product delivery to problem solving.
+      </p>
+    </div>
+
+    <a class="text-sm text-zinc-300 hover:text-white transition" href="#projects">
+      Projects →
+    </a>
+  </div>
+
+  <div class="mt-6 grid gap-4 md:grid-cols-3">
+    <!-- Frontend -->
+    <div class="rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <div class="text-sm text-zinc-400">Frontend</div>
+          <div class="mt-1 text-lg font-semibold">UI that ships fast</div>
+        </div>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-xs text-zinc-300">Core</span>
+      </div>
+
+      <div class="mt-5 flex flex-wrap gap-2 text-xs text-zinc-300">
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">JavaScript</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">React</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Tailwind CSS</span>
+      </div>
+
+      <p class="mt-4 text-sm text-zinc-400">
+        Clean components, strong typography, smooth motion, responsive layout.
+      </p>
+    </div>
+
+    <!-- Backend -->
+    <div class="rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <div class="text-sm text-zinc-400">Backend</div>
+          <div class="mt-1 text-lg font-semibold">APIs & systems</div>
+        </div>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-xs text-zinc-300">Core</span>
+      </div>
+
+      <div class="mt-5 flex flex-wrap gap-2 text-xs text-zinc-300">
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">.NET</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">REST APIs</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Java</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Django (Python)</span>
+      </div>
+
+      <p class="mt-4 text-sm text-zinc-400">
+        Building endpoints, auth flows, integrations, automation, stable delivery.
+      </p>
+    </div>
+
+    <!-- Databases -->
+    <div class="rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <div class="text-sm text-zinc-400">Databases</div>
+          <div class="mt-1 text-lg font-semibold">Data that stays sane</div>
+        </div>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-xs text-zinc-300">Core</span>
+      </div>
+
+      <div class="mt-5 flex flex-wrap gap-2 text-xs text-zinc-300">
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">PostgreSQL</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">MySQL</span>
+      </div>
+
+      <p class="mt-4 text-sm text-zinc-400">
+        Designing tables, queries, indexes, and keeping performance predictable.
+      </p>
+    </div>
+
+    <!-- Architecture -->
+    <div class="rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <div class="text-sm text-zinc-400">Architecture</div>
+          <div class="mt-1 text-lg font-semibold">Code that scales</div>
+        </div>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-xs text-zinc-300">Core</span>
+      </div>
+
+      <div class="mt-5 flex flex-wrap gap-2 text-xs text-zinc-300">
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">MVC</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">SOLID</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">OOP</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Clean Architecture</span>
+      </div>
+
+      <p class="mt-4 text-sm text-zinc-400">
+        Structure first: predictable layers, maintainability, and testability.
+      </p>
+    </div>
+
+    <!-- Algorithms -->
+    <div class="rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <div class="text-sm text-zinc-400">CS fundamentals</div>
+          <div class="mt-1 text-lg font-semibold">Thinking in complexity</div>
+        </div>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-xs text-zinc-300">Core</span>
+      </div>
+
+      <div class="mt-5 flex flex-wrap gap-2 text-xs text-zinc-300">
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Algorithms & Data Structures</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Time/Space complexity</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Competitive-style solving</span>
+      </div>
+
+      <p class="mt-4 text-sm text-zinc-400">
+        Breaking problems down fast, choosing correct trade-offs under pressure.
+      </p>
+    </div>
+
+    <!-- Other -->
+    <div class="rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <div class="text-sm text-zinc-400">Other</div>
+          <div class="mt-1 text-lg font-semibold">Extra tools</div>
+        </div>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1 text-xs text-zinc-300">Also</span>
+      </div>
+
+      <div class="mt-5 flex flex-wrap gap-2 text-xs text-zinc-300">
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Unity</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">C++</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Adobe Photoshop</span>
+        <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">LeetCode (daily grind)</span>
+      </div>
+
+      <p class="mt-4 text-sm text-zinc-400">
+        Prototyping, 3D/VR experiments, and visuals when needed.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- 4) PROJECTS -->
+  <section id="projects" class="mt-14">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="text-xl font-semibold">Featured Projects</h2>
+        <p class="mt-2 text-zinc-400">A few things I’ve built recently.</p>
+      </div>
+
+      <a class="text-sm text-zinc-300 hover:text-white transition" href="#contact">
+        All links →
+      </a>
+    </div>
+
+    <div class="mt-6 grid gap-4 md:grid-cols-3">
+ <a
+  class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition"
+  href="https://github.com/albert-ios/Gym-AI"
+  target="_blank"
+  rel="noreferrer"
+>
+  <div class="text-xs text-zinc-400">AI • Fitness • Web App</div>
+
+  <div class="mt-2 font-medium">Gym-AI</div>
+
+  <p class="mt-2 text-sm text-zinc-400">
+    AI-powered fitness app that uses computer vision to analyze workout movements
+    and provide actionable feedback for optimized training.
+  </p>
+
+  <div class="mt-4 flex flex-wrap gap-2 text-xs text-zinc-300">
+    <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">AI</span>
+    <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Computer Vision</span>
+    <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Python</span>
+    <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Backend</span>
+  </div>
+
+  <div class="mt-4 text-sm text-zinc-300 group-hover:text-white transition">
+    Open →
+  </div>
+</a>
+
+
+
+      <a class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition" href="#" target="_blank" rel="noreferrer">
+        <div class="text-xs text-zinc-400">Automation</div>
+        <div class="mt-2 font-medium">Project #2</div>
+        <p class="mt-2 text-sm text-zinc-400">
+          Short description: problem → solution → result.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs text-zinc-300">
+          <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Python</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Selenium</span>
+        </div>
+        <div class="mt-4 text-sm text-zinc-300 group-hover:text-white transition">Open →</div>
+      </a>
+
+      <a class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition" href="#" target="_blank" rel="noreferrer">
+        <div class="text-xs text-zinc-400">Backend</div>
+        <div class="mt-2 font-medium">Project #3</div>
+        <p class="mt-2 text-sm text-zinc-400">
+          Short description: tech + value.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs text-zinc-300">
+          <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">.NET</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">PostgreSQL</span>
+        </div>
+        <div class="mt-4 text-sm text-zinc-300 group-hover:text-white transition">Open →</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 5) ARTICLES -->
+  <section id="articles" class="mt-14">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="text-xl font-semibold">Articles</h2>
+        <p class="mt-2 text-zinc-400">Writing about engineering, product, and the future.</p>
+      </div>
+
+      <a class="text-sm text-zinc-300 hover:text-white transition" href="https://medium.com/@arturpodchayev" target="_blank" rel="noreferrer">
+        Medium profile →
+      </a>
+    </div>
+
+    <div class="mt-6 grid gap-4 md:grid-cols-3">
+      <a class="group rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition"
+         href="https://medium.com/@arturpodchayev/what-will-it-mean-to-be-a-software-engineer-by-2030-0a4df44345dd"
+         target="_blank" rel="noreferrer">
+        <div class="text-xs text-zinc-400">Medium • Article</div>
+        <div class="mt-2 font-medium">
+          What will it mean to be a software engineer by 2030?
+        </div>
+        <p class="mt-2 text-sm text-zinc-400">
+          A practical look at skills, roles, and what changes in the industry.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs text-zinc-300">
+          <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Career</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Trends</span>
+          <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">Software</span>
+        </div>
+        <div class="mt-4 text-sm text-zinc-300 group-hover:text-white transition">Read →</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- 6) MUSIC -->
+  <section id="music" class="mt-14">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="text-xl font-semibold">My fav music</h2>
+        <p class="mt-2 text-zinc-400">A playlist that keeps me in flow.</p>
+      </div>
+    </div>
+
+    <div class="mt-6 rounded-3xl border border-white/10 bg-white/5 p-4 md:p-6">
+      <iframe
+        data-testid="embed-iframe"
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/1FulyKG2feuNE0bHGm9Al4?utm_source=generator&theme=0"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- 7) FINAL LINKS = CONTACT (самый низ) -->
+  <section id="contact" class="mt-14 pb-20">
+    <div class="flex items-end justify-between gap-4">
+      <div>
+        <h2 class="text-xl font-semibold">Links</h2>
+        <p class="mt-2 text-zinc-400">Primary ways to reach me.</p>
+      </div>
+    </div>
+
+    <div class="mt-6 grid gap-4 md:grid-cols-5">
+      <a class="rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition"
+         href="https://github.com/arturpodchayev" target="_blank" rel="noreferrer">
+        <div class="text-sm text-zinc-400">Primary link</div>
+        <div class="mt-1 font-medium">GitHub</div>
+      </a>
+
+      <a class="rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition"
+         href="https://www.linkedin.com/in/arturpodchayev/" target="_blank" rel="noreferrer">
+        <div class="text-sm text-zinc-400">Primary link</div>
+        <div class="mt-1 font-medium">LinkedIn</div>
+      </a>
+
+      <a class="rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition"
+         href="https://t.me/Artur_IT_developer" target="_blank" rel="noreferrer">
+        <div class="text-sm text-zinc-400">Primary link</div>
+        <div class="mt-1 font-medium">Telegram</div>
+      </a>
+
+      <a class="rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition"
+         href="https://leetcode.com/u/Artur_648/" target="_blank" rel="noreferrer">
+        <div class="text-sm text-zinc-400">Primary link</div>
+        <div class="mt-1 font-medium">LeetCode</div>
+      </a>
+
+      <a class="rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition"
+         href="https://x.com/arturpodchayev" target="_blank" rel="noreferrer">
+        <div class="text-sm text-zinc-400">Primary link</div>
+        <div class="mt-1 font-medium">X (Twitter)</div>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

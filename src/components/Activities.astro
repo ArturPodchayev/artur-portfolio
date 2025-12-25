@@ -1,0 +1,88 @@
+---
+const activities = [
+  {
+    title: "Bukhara Biennale — Organiser",
+    year: "2024",
+    place: "Bukhara, Uzbekistan",
+    role: "Translator • Logistics • Ops",
+    desc:
+      "Worked with international artists & producers: translation, coordination, on-site logistics, and smooth execution under real deadlines.",
+    tags: ["Events", "Operations", "Communication", "English"],
+    image: "/bukhara.jpg", // можешь удалить строку если нет фотки
+  },
+  {
+    title: "Youth Data Club — Community Builder",
+    year: "2025",
+    place: "Tashkent, Uzbekistan",
+    role: "Organizer • Partnerships",
+    desc:
+      "Built and grew the community, organized offline events, worked with speakers and partners, and shipped content consistently.",
+    tags: ["Community", "Public speaking", "Partnerships"],
+    image: "/ydc.jpg",
+  },
+  {
+    title: "Tech / Business Collaboration",
+    year: "2025",
+    place: "Uzbekistan",
+    role: "Product • Automation",
+    desc:
+      "Collaborated with teams on automation and product delivery: fast execution, clean systems, measurable outcomes.",
+    tags: ["Automation", "Product", "Delivery"],
+    image: "/tbc.jpg",
+  },
+];
+---
+
+<section id="activities" class="mt-14">
+  <div class="flex items-end justify-between gap-4">
+    <div>
+      <h2 class="text-xl font-semibold">Activities</h2>
+      <p class="mt-2 text-zinc-400">
+        Real-world work: events, community, operations — where discipline and delivery matter.
+      </p>
+    </div>
+
+    <a class="text-sm text-zinc-300 hover:text-white transition" href="#links">
+      Contact / links →
+    </a>
+  </div>
+
+  <div class="mt-6 grid gap-4 md:grid-cols-3">
+    {activities.map((a) => (
+      <div class="group rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <div class="text-xs text-zinc-400">{a.year} • {a.place}</div>
+            <div class="mt-2 text-lg font-semibold leading-tight">{a.title}</div>
+            <div class="mt-2 text-sm text-zinc-300">{a.role}</div>
+          </div>
+
+          <div class="shrink-0 rounded-2xl border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-300">
+            Active
+          </div>
+        </div>
+
+        {a.image && (
+          <div class="mt-5 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+            <img
+              src={a.image}
+              alt={a.title}
+              class="h-44 w-full object-cover group-hover:scale-[1.02] transition duration-300"
+              loading="lazy"
+            />
+          </div>
+        )}
+
+        <p class="mt-5 text-sm text-zinc-400 leading-relaxed">
+          {a.desc}
+        </p>
+
+        <div class="mt-5 flex flex-wrap gap-2 text-xs text-zinc-300">
+          {a.tags.map((t) => (
+            <span class="rounded-full border border-white/10 bg-white/5 px-2 py-1">{t}</span>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
