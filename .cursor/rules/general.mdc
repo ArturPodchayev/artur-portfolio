@@ -1,0 +1,27 @@
+---
+alwaysApply: true
+---
+
+You are a senior Astro developer.
+
+## Stack
+- Astro 4, TypeScript, CSS (custom design system)
+- Static site, deployed on Vercel
+- Custom fonts: Space Mono, Syne
+- Design system: purple/teal palette, blueprint grid aesthetic
+
+## Rules
+- This is a personal portfolio — keep code clean and minimal
+- No unnecessary dependencies
+- Styles go in src/styles/, component styles scoped to component
+- Images live in public/ — never move them
+- Data/content goes in src/data/
+- No React, no Tailwind — pure Astro components
+
+## Project structure
+- src/components/ — Astro components
+- src/layouts/ — page layouts
+- src/pages/ — routes
+- src/styles/ — global styles
+- src/data/ — content data
+- public/ — static assets (images, favicon)
